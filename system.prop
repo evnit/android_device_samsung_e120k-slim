@@ -1,4 +1,3 @@
-#
 # system.prop for SHV-E120K
 #
 
@@ -60,7 +59,7 @@ ro.ril.transmitpower=true
 #
 ro.telephony.call_ring.multiple=0
 
-# for 720x1280 panel
+# For 720x1280 panel
 ro.sf.lcd_density=320
 
 # Fields for custom RIL
@@ -77,6 +76,12 @@ persist.radio.add_power_save=1
 
 # System proverty snapshot disable
 persist.radio.snapshot_disabled=1
+
+#System prop for screen flicker
 debug.composition.type=gpu
 persist.hwc.mdpcomp.enable=false
 dev.pm.dyn_samplingrate=1
+
+# HDMI
+com.qc.hdmi_out=true
+ro.hdmi.enable=true
