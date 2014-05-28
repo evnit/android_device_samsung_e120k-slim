@@ -55,7 +55,7 @@ ro.ril.transmitpower=true
 
 #
 # Needed to match behavior of stock rom
-#      D/PHONE: mDoesRilSendMultipleCallRing=false
+# D/PHONE: mDoesRilSendMultipleCallRing=false
 #
 ro.telephony.call_ring.multiple=0
 

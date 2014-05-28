@@ -14,19 +14,29 @@
 # limitations under the License.
 #
 
-# Also get non-open-source specific aspects if available
-$(call inherit-product, vendor/samsung/e120k/e120k-vendor.mk)
+## (2) Also get non-open-source specific aspects if available
+$(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)
 
-# Overlays
+## overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/e120k/overlay
+
+# Device uses high-density artwork where available
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
 
-# Bluetooth firmware
+# BT firmware
 PRODUCT_COPY_FILES += \
     device/samsung/e120k/firmware/bcm4330B1.hcd:system/etc/firmware/bcm4330B1.hcd
 
+# init.d scripts
+PRODUCT_COPY_FILES += \
+    device/samsung/e120k/root/system/etc/init.d/91fixoverlays:system/etc/init.d/91fixoverlays
+
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
+
+$(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)

@@ -34,11 +34,11 @@ USE_CAMERA_STUB := true
 TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k
+TARGET_OTA_ASSERT_DEVICE := SHV-E120K,dali,e120k
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom kgsl.mmutype=gpummu usb_id_pin_rework=true no_console_suspend=true zcache msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 androidboot.selinux=permissive
-BOARD_KERNEL_BASE := 0x48000000
+BOARD_KERNEL_BASE           := 0x48000000
 TARGET_KERNEL_CONFIG        := cyanogenmod_e120k_defconfig
 TARGET_KERNEL_SOURCE        := kernel/samsung/msm8660-common
 
@@ -61,4 +61,3 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/e120k/bluetooth
-
