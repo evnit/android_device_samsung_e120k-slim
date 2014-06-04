@@ -39,11 +39,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/samsung/e120k/root/system/etc/init.d/91fixoverlays:system/etc/init.d/91fixoverlays
 
-# GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.gps.rc:root/init.gps.rc \
-    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
-
 # Inherit from celox-common
 $(call inherit-product, device/samsung/celox-common/celox-common.mk)
 
