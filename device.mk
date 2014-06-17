@@ -27,6 +27,15 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8660
+
+GPS_CONF := device/samsung/e120k/gps/gps.conf
+
+PRODUCT_COPY_FILES += \
+    $(GPS_CONF):/system/etc/gps.conf
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/e120k/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc
