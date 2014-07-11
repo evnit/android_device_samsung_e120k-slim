@@ -1,10 +1,5 @@
 [
   {
-    "repository": "evnit/android_vendor_samsung_e120k",
-    "target_path": "vendor/samsung/e120k",
-    "branch": "cm-11.0"
-  },
-  {
     "repository": "SlimRoms/device_samsung_qcom-common",
     "target_path": "device/samsung/qcom-common",
     "branch": "kk4.4"
