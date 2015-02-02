@@ -20,7 +20,7 @@
 
 # Assert
 TARGET_BOARD_INFO_FILE ?= device/samsung/e120k/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k
+TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k,dali
 
 # Kernel
 # Kernel
