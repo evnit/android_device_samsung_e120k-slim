@@ -20,23 +20,26 @@
 
 # Assert
 TARGET_BOARD_INFO_FILE ?= device/samsung/e120k/board-info.txt
-TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k,dali
+TARGET_OTA_ASSERT_DEVICE := SHV-E120K,e120k
 
-# Kernel
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/e120k/bluetooth
+
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom kgsl.mmutype=gpummu usb_id_pin_rework=true no_console_suspend=true zcache msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x48000000
 TARGET_KERNEL_CONFIG := cyanogenmod_e120k_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/msm8660-common
+TARGET_KERNEL_SOURCE := kernel/samsung/msm8660
+#KERNEL_TOOLCHAIN_PREFIX := arm-linux-gnueabihf-
+#KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilt/$(HOST_OS)-x86/toolchain/linaro-4.7-12.10/bin/"
 
 # Partitions
-# TARGET_NO_RECOVERY := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776192
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 627048448
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/e120k/bluetooth
+# Resolution
+DEVICE_RESOLUTION := 720x1280

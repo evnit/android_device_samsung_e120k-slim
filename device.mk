@@ -20,22 +20,16 @@ $(call inherit-product-if-exists, vendor/samsung/e120k/e120k-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
-    $(LOCAL_PATH)/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
-    $(LOCAL_PATH)/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
-    $(LOCAL_PATH)/ramdisk/init.qcom.early_boot.sh:root/init.qcom.early_boot.sh \
-    $(LOCAL_PATH)/ramdisk/init.qcom.lpm_boot.sh:root/init.qcom.lpm_boot.sh \
-    $(LOCAL_PATH)/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    $(LOCAL_PATH)/ramdisk/init.target.rc:root/init.target.rc \
-    $(LOCAL_PATH)/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.class_core.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.class_main.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.early_boot.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.lpm_boot.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.sh \
+    $(LOCAL_PATH)/ramdisk/init.qcom.usb.rc:root/init.target.rc
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
